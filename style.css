@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background-color: #f5f7fa;
+    color: #1e2a3e;
+    line-height: 1.5;
+}
+
+.top-bar {
+    background-color: #003057;
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.top-bar a {
+    color: #ffcd00;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.main-header {
+    background-color: white;
+    padding: 20px 40px;
+    border-bottom: 4px solid #ffcd00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: #003057;
+}
+
+.logo p {
+    font-size: 0.85rem;
+    color: #4a627a;
+}
+
+.contact-info {
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+nav {
+    background-color: #002244;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+nav ul li a {
+    display: block;
+    padding: 14px 22px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: #ffcd00;
+    color: #002244;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 30px;
+}
+
+.page-title {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border-left: 6px solid #ffcd00;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.page-title h1 {
+    font-size: 2.3rem;
+    color: #003057;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #003057;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ffcd00;
+    color: #003057;
+}
+
+footer {
+    background-color: #002244;
+    color: #bbb;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #ffcd00;
+    text-decoration: none;
+}
+
+/* Staff grid for study page */
+.staff-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.staff-card {
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.staff-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ffcd00;
+}
+
+.staff-card h3 {
+    margin: 15px 0 5px;
+    color: #003057;
+}
+
+.staff-card p {
+    color: #4a627a;
+    font-size: 0.9rem;
+}
+
+/* Form styling */
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-container label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #003057;
+}
+
+.form-container input, .form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.form-container input[type="file"] {
+    padding: 5px;
+}
+
+@media (max-width: 700px) {
+    .main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-info {
+        text-align: center;
+        margin-top: 10px;
+    }
+    nav ul li a {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+}
