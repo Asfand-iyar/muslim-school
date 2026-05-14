@@ -44,14 +44,14 @@ body {
 }
 
 .logo-img {
-    height: 120px;
+    height: 140px;
     width: auto;
     border-radius: 12px;
     object-fit: cover;
 }
 
 .logo-text h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: #003057;
     margin: 0;
     line-height: 1.2;
