@@ -44,21 +44,21 @@ body {
 }
 
 .logo-img {
-    height: 65px;
+    height: 120px;
     width: auto;
     border-radius: 12px;
     object-fit: cover;
 }
 
 .logo-text h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #003057;
     margin: 0;
     line-height: 1.2;
 }
 
 .logo-text p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #4a627a;
     margin: 5px 0 0 0;
 }
