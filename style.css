@@ -36,15 +36,33 @@ body {
     flex-wrap: wrap;
 }
 
-.logo h1 {
-    font-size: 1.8rem;
-    color: #003057;
+/* ========== NEW LOGO STYLES ========== */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.logo p {
-    font-size: 0.85rem;
-    color: #4a627a;
+.logo-img {
+    height: 65px;
+    width: auto;
+    border-radius: 12px;
+    object-fit: cover;
 }
+
+.logo-text h1 {
+    font-size: 2rem;
+    color: #003057;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.logo-text p {
+    font-size: 0.8rem;
+    color: #4a627a;
+    margin: 5px 0 0 0;
+}
+/* ========== END LOGO STYLES ========== */
 
 .contact-info {
     font-size: 0.9rem;
@@ -73,6 +91,12 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+    background-color: #ffcd00;
+    color: #002244;
+}
+
+/* Active page highlight */
+nav ul li a.active {
     background-color: #ffcd00;
     color: #002244;
 }
@@ -116,6 +140,7 @@ nav ul li a:hover {
     color: #003057;
 }
 
+/* Footer with logo support */
 footer {
     background-color: #002244;
     color: #bbb;
@@ -130,10 +155,36 @@ footer a {
     text-decoration: none;
 }
 
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo-img {
+    height: 40px;
+    width: auto;
+    border-radius: 8px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+}
+
 /* Staff grid for study page */
 .staff-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 30px;
     margin-top: 30px;
     justify-content: center;
@@ -144,8 +195,12 @@ footer a {
     border-radius: 20px;
     padding: 20px;
     text-align: center;
-    width: 250px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-5px);
 }
 
 .staff-card img {
@@ -181,7 +236,9 @@ footer a {
     color: #003057;
 }
 
-.form-container input, .form-container select {
+.form-container input, 
+.form-container select, 
+.form-container textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -194,17 +251,88 @@ footer a {
     padding: 5px;
 }
 
+.form-container textarea {
+    resize: vertical;
+}
+
+/* Two column layout */
+.two-columns {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.two-columns > div {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.highlight-box {
+    background: #eef2f7;
+    padding: 25px;
+    border-radius: 16px;
+    margin-top: 30px;
+    border-left: 5px solid #ffcd00;
+}
+
+/* Responsive Design */
 @media (max-width: 700px) {
     .main-header {
         flex-direction: column;
         text-align: center;
     }
+    
+    .logo {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo-text h1 {
+        font-size: 1.5rem;
+    }
+    
     .contact-info {
         text-align: center;
         margin-top: 10px;
     }
+    
     nav ul li a {
         padding: 10px 12px;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+    }
+    
+    .page-title h1 {
+        font-size: 1.8rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .two-columns {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .staff-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .logo-img {
+        height: 50px;
     }
 }
