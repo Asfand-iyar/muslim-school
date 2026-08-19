@@ -15,43 +15,46 @@
         th { background: #003057; color: white; }
         .step-number { display: inline-block; width: 30px; height: 30px; background: #ffcd00; color: #003057; border-radius: 50%; text-align: center; line-height: 30px; font-weight: bold; margin-right: 10px; }
         
-        /* Video section with flex layout */
-        .video-section {
+        /* ===== VIDEO SMALL & RIGHT ALIGNED ===== */
+        .video-container-small {
             display: flex;
-            gap: 30px;
+            gap: 25px;
             align-items: flex-start;
             flex-wrap: wrap;
             background: white;
-            padding: 25px;
+            padding: 20px;
             border-radius: 16px;
             margin: 20px 0;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
-        .video-section .video-content {
+        .video-container-small .video-text {
             flex: 1;
-            min-width: 250px;
+            min-width: 200px;
         }
-        .video-section .video-content h2 {
+        .video-container-small .video-text h2 {
             color: #003057;
-            margin-bottom: 10px;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
         }
-        .video-section .video-content p {
+        .video-container-small .video-text p {
             color: #4a627a;
+            font-size: 0.95rem;
         }
-        .video-section .video-player {
-            flex: 0 0 320px;
+        .video-container-small .video-box {
+            flex: 0 0 280px;
             max-width: 100%;
         }
-        .video-section .video-player video {
+        .video-container-small .video-box video {
             width: 100%;
             border-radius: 12px;
             border: 3px solid #ffcd00;
+            display: block;
         }
         @media (max-width: 700px) {
-            .video-section {
+            .video-container-small {
                 flex-direction: column;
             }
-            .video-section .video-player {
+            .video-container-small .video-box {
                 flex: 1;
                 width: 100%;
             }
@@ -93,14 +96,14 @@
         <p><strong>Admission Open Now!</strong> Limited seats available.</p>
     </div>
 
-    <!-- 🎬 PRINCIPAL'S WELCOME VIDEO - SMALL & RIGHT ALIGNED -->
-    <div class="video-section">
-        <div class="video-content">
+    <!-- 🎬 VIDEO - SMALL & RIGHT ALIGNED -->
+    <div class="video-container-small">
+        <div class="video-text">
             <h2>🎥 Principal's Welcome Message</h2>
             <p>Hear from our Principal about admissions, the school experience, and what makes THE MUSLIM SCHOOL the right choice for your child's future.</p>
-            <p style="margin-top: 10px; font-size: 0.9rem; color: #4a627a;">📌 Video duration: 3 minutes</p>
+            <p style="margin-top: 8px; font-size: 0.85rem; color: #4a627a;">📌 Video duration: 3 minutes</p>
         </div>
-        <div class="video-player">
+        <div class="video-box">
             <video controls>
                 <source src="principal-message.mp4" type="video/mp4">
                 Your browser does not support the video tag.
