@@ -12,6 +12,47 @@
             gap: 30px;
             margin-top: 30px;
         }
+        /* Video container with flex layout */
+        .staff-video-section {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .staff-video-section .video-content {
+            flex: 1;
+            min-width: 250px;
+        }
+        .staff-video-section .video-content h2 {
+            color: #003057;
+            margin-bottom: 10px;
+        }
+        .staff-video-section .video-content p {
+            color: #4a627a;
+        }
+        .staff-video-section .video-player {
+            flex: 0 0 320px;
+            max-width: 100%;
+        }
+        .staff-video-section .video-player video {
+            width: 100%;
+            border-radius: 12px;
+            border: 3px solid #ffcd00;
+        }
+        @media (max-width: 700px) {
+            .staff-video-section {
+                flex-direction: column;
+            }
+            .staff-video-section .video-player {
+                flex: 1;
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -52,12 +93,15 @@
         <p>Meet the dedicated educators behind our success. 30+ qualified professionals.</p>
     </div>
 
-    <!-- 🎬 STAFF INTRODUCTION VIDEO -->
-    <div style="background: white; padding: 30px; border-radius: 16px; margin: 20px 0; text-align: center;">
-        <h2>🎥 Meet Our Teaching Team</h2>
-        <p>Watch this video to meet our dedicated teachers and staff.</p>
-        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin-top: 15px; border-radius: 12px;">
-            <video style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" controls>
+    <!-- 🎬 STAFF INTRODUCTION VIDEO - SMALL & RIGHT ALIGNED -->
+    <div class="staff-video-section">
+        <div class="video-content">
+            <h2>🎥 Meet Our Teaching Team</h2>
+            <p>Watch this short introduction to meet our dedicated teachers and staff. Our team of 30+ qualified professionals is committed to providing the best education for your children.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: #4a627a;">📌 Video duration: 2 minutes</p>
+        </div>
+        <div class="video-player">
+            <video controls>
                 <source src="staff-intro.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -113,7 +157,21 @@
             <p>Hafiz-e-Quran, 15+ years</p>
         </div>
         
-        <!-- Add more staff members by copying the block above -->
+        <!-- Staff Member 7 -->
+        <div class="staff-card">
+            <img src="images/teacher7.jpg" alt="Computer Teacher">
+            <h3>Mr. Bilal Ahmed</h3>
+            <p>Computer Science</p>
+            <p>BS CS, 7+ years</p>
+        </div>
+        
+        <!-- Staff Member 8 -->
+        <div class="staff-card">
+            <img src="images/teacher8.jpg" alt="Social Studies Teacher">
+            <h3>Ms. Sana Tariq</h3>
+            <p>Social Studies</p>
+            <p>MA History, 10+ years</p>
+        </div>
     </div>
 
     <p style="margin-top: 30px; text-align: center;">📌 We have 30+ qualified staff members. <a href="apply.html" class="btn">Join our team →</a></p>
